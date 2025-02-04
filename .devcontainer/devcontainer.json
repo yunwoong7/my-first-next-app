@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "Node.js Development",
+	// Debian 기반 이미지 사용
+	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		}
+	},
+
+	// 포트 포워딩 설정 (Next.js 기본 포트)
+	"forwardPorts": [3001],
+
+	// VS Code 설정
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
+			]
+		}
+	}
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
